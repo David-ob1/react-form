@@ -46,7 +46,7 @@ const loginLink = () =>{
 
               <div className="register-link">
                 <p>Don't have an account? 
-                  <a href="#" onClick={registerLink}>Register</a>
+                  <a href="#" onClick={e =>{e.preventDefault(),registerLink()}}>Register</a>
                   </p>
               </div>
 
@@ -84,7 +84,7 @@ const loginLink = () =>{
               <button type='submit'>Register</button>
 
               <div className="register-link">
-                <p>Already have an account <a href="#" onClick={loginLink}>Login</a></p>
+                <p>Already have an account <a href="#" onClick={ e =>{e.preventDefault(),loginLink()}}>Login</a></p>
               </div>
 
             </form>
